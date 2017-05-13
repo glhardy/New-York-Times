@@ -6,28 +6,48 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">	
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="d-flex">
-				<h1>New York Times Search</h1>
+			<div class="d-flex jumbotron">
+				<h1><i class="fa fa-newspaper-o"></i>New York Times Search</h1>
 			</div>
 		</div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="d-flex">
+			<div class="d-flex panel panel-primary">
 				<div id="searchParameters">
 					<h2>Search Parameters</h2>
 					<form>
-						Search Term: <input type="text" name="searchTerm" value="Type Search Here">
+						<div class="form-group">
+							<label for="search">Search Term: </label>
+							<input type="text" class="form-control" id="searchTerm" name="searchTerm" value="Type Search Here">
+						</div>
 						<br>
-						Number of Records to Retrieve: <input type="text" name="retrieveThisMany" value="5">
+						<div class="form-group">
+							<label for="pwd">Number of Records to Retrieve: </label>
+							<select class="form-control" id="numRecordsSelect">
+								<option value="1" selected>1</option>
+								<option value="5">5</option>
+								<option value="10">10</option> 
+							</select>
+						</div>
 						<br>
-						Start Year (Optional): <input type="text" name="startYear" value="optional">
+						<div class="form-group">
+							<label for="startYear">Start Year (Optional):</label>
+							<input type="text" class="form-control" id="startYear">
+						</div>
 						<br>
-						End Year (Optional): <input type="text" name="endYear" value="optional">
+						<div class="form-conrol">
+							<label for="endYear">End Year (Optional):</label>
+							<input type="text" class="form-control" id="endYear">
+						</div>
+						
 						<br>
 						<input id="submit" type="submit" value="Submit">
 					</form>
